@@ -1,5 +1,6 @@
 #alguns projetos feitos em sala
 import datetime
+import math
 def calculadora_basica():
     O = int(input("digite a operação que deseja fazer.\n1 para soma.\n2 para subtração.\n3 para mutiplicação.\n4 para divisão.\n"))
     if O == 1:
@@ -38,19 +39,19 @@ def lucro():
         print("A compra",x,"e a venda",y,"O resultado se mantem nulo")
 
 def idade():
-    x = int(input("Digite o ano de nascimento\n"))
     d = int(input("Digite o dia do nascimento\n"))
     m = int(input("Digite o Mês de nascimento\n"))
+    x = int(input("Digite o ano de nascimento\n"))
     y = datetime.datetime.now()
-    if d <= y.day:
-        if m <= y.month:
+    if m <= y.month:
+        if d <= y.day:
             z = y.year-x
         else:
             z = (y.year-x)-1
     else:
-            z = (y.year-x)-1
+        z = (y.year-x)-1
 
-    print("A pessoa que nasceu em",x,"Esta em",y.year,"com",z,"Anos")
+    print("A pessoa que nasceu em",x,"esta em",y.year,"com",z,"Anos")
     if z>=16:
         print("A pessoa pode votar em",y.year,"pois ela tem",z,"anos")
     else:
@@ -60,4 +61,13 @@ def idade():
     else:
         print("A pessoa não pode tirar CNH pois em",y.year,"ela tem",z,"anos")
 
+def grau():
+    x=int(input("Digite o valor de A\n"))
+    y=int(input("Digite o valor de B\n"))
+    if x and y!=0:
+        z=-y/x
+        a=math.sqrt(z)
+        print("A raiz quadrada do valor x e",a,"sendo x=",z)
+    else:
+        print("Os valores não pode ser Nulo")
 idade()
