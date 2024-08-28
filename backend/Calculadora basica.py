@@ -30,10 +30,10 @@ def lucro():
     z = y-x
     a = z**1
     if z>0:
-        print("A compra teve um lucro de R$",a)
+        print("A compra",x,"e a venda",y,"teve um lucro de R$",a)
     elif z<0:
-        print("A compra teve um prejuizo de R$",a)
+        print("A compra",x,"e a venda",y," teve um prejuizo de R$",a)
     else:
-        print("O resultado se mantem nulo")
+        print("A compra",x,"e a venda",y,"O resultado se mantem nulo")
 
 lucro()
