@@ -1,0 +1,16 @@
+body{
+    background-color: #6F6F6F;
+}
+
+h1{
+    text-align: center;
+    color: #DC7CFF;
+}
+div{
+    margin: auto;
+    height: 150px;
+    max-width: 200px;
+    position: static;
+    background-color: #CBFEFF;
+    text-align: center;
+}
