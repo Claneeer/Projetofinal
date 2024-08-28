@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD
     background-color: #6F6F6F;
 }
 
@@ -14,3 +15,29 @@ div{
     background-color: #CBFEFF;
     text-align: center;
 }
+=======
+    background-color:#a9a9a9;
+}
+.button{
+    display: inline-block;
+  padding: 8px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+}
+#container{
+width: 400px;
+height: 400px;
+position: relative;
+background: aqua;
+}
+#animate{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: blue;
+}
+>>>>>>> 965a978d1c157420f7559f09fe5c281f489baf2e
