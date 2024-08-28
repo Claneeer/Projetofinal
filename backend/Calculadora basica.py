@@ -1,4 +1,5 @@
 #alguns projetos feitos em sala
+import datetime
 def calculadora_basica():
     O = int(input("digite a operação que deseja fazer.\n1 para soma.\n2 para subtração.\n3 para mutiplicação.\n4 para divisão.\n"))
     if O == 1:
@@ -36,4 +37,27 @@ def lucro():
     else:
         print("A compra",x,"e a venda",y,"O resultado se mantem nulo")
 
-lucro()
+def idade():
+    x = int(input("Digite o ano de nascimento\n"))
+    d = int(input("Digite o dia do nascimento\n"))
+    m = int(input("Digite o Mês de nascimento\n"))
+    y = datetime.datetime.now()
+    if d <= y.day:
+        if m <= y.month:
+            z = y.year-x
+        else:
+            z = (y.year-x)-1
+    else:
+            z = (y.year-x)-1
+
+    print("A pessoa que nasceu em",x,"Esta em",y.year,"com",z,"Anos")
+    if z>=16:
+        print("A pessoa pode votar em",y.year,"pois ela tem",z,"anos")
+    else:
+        print("A pessoa não pode votar pois em",y.year,"ela tem",z,"anos")
+    if z>=18:
+        print("A pessoa pode tirar CNH em",y.year,"pois ela tem",z,"anos")
+    else:
+        print("A pessoa não pode tirar CNH pois em",y.year,"ela tem",z,"anos")
+
+idade()
