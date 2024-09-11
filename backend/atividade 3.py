@@ -13,7 +13,7 @@ def real():
             break
         contador += 1
     media=soma/contador
-    print("Foram digitados",contador,"numero\nA soma de todos os valores:",soma,"\nA media aritimetica:",media,"\nNumeros que são maiores que 20:",vinte)
+    print("Foram digitados",contador,"numero\nA soma de todos os valores:",soma,"\nA media aritimetica:",media,"\n Quantidade de numeros que são maiores que 20:",vinte)
 
 def notas():
     contador=1

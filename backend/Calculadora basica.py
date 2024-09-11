@@ -26,7 +26,7 @@ def calculadora_basica():
         print("A divisão entre",x, "é",y,"e igual a",z)
     else:
         print("Não a uma operação")
-#Aula 4
+#Aula if else
 def lucro():
     x = float(input("Digite o valor da Compra\n"))
     y = float(input("Digite o valor da venda\n"))
@@ -71,7 +71,7 @@ def grau():
         print("A raiz quadrada do valor x e",a,"sendo x=",z)
     else:
         print("Os valores não pode ser Nulo")
-
+#Aula While
 def white():
     print("estrutura de repetição")
     i=0
@@ -152,4 +152,54 @@ def impar():
     print("A media aritimetica dos valores pares =",ptotal,"\n tendo",par,"numeros pares")
     print("A media aritimetica dos valores impares =",itotal,"\n tendo",impar,"numeros impares\n e foram digitados",contador,"numeros")
 
-impar()
+def Maior():
+    contador=0
+    tabela=[]
+    maximo=0
+    minimo=0
+    total=0
+    while contador < 10:
+        numero=int(input("Digite o numero inteiro não negativo\n"))
+        tabela.append(numero)
+        if numero > maximo:
+            maximo = numero
+        elif numero < minimo and numero != 0:
+            minimo = numero
+        total+=numero
+        contador+=1
+    dif = [tabela[numero] for numero in tabela if tabela[numero] > 0]
+    mox = max(dif)
+    mon = min(dif)
+    soma = sum(dif)
+    print("O maior numero digitado foi:",mox ,"\n O menor foi:",mon ,"\ntodos os numero digitados:",tabela,"total de numero",contador,"\nA soma de todos os numero e:",soma)
+
+def genero():
+    contador = 0
+    print("Lista de altura e genero.\n utiliza (m) para masculino e (f) para feminino")
+    taltura=[]
+    feminino=[]
+    masculino=[]
+    while contador < 10:
+        altura=float(input("Digite a altura\n")) 
+        sexo=str(input("Sexo?:\n")) 
+        taltura.append(altura)
+        if sexo == "m":
+            masculino.append(altura)
+        elif sexo == "f":
+            feminino.append(altura)
+        contador+=1
+    fsoma = sum(feminino)/contador
+    fmaior = max(feminino)
+    fmenor = min(feminino)
+    msoma = sum(masculino)/contador
+    mmaior = max(masculino)
+    mmenor = min(masculino)
+    soma = sum(taltura)/contador
+    maior = max(taltura)
+    menor = min(taltura)
+    print("Genero|Media de Altura|Altura maxima|Altura Minima")
+    for fem,mas in zip(feminino,masculino):
+        print(mas,"|",msoma,"|",mmaior,"|",mmenor)
+        print(fem,"|",fsoma,"|",fmaior,"|",fmenor)
+    print("Maior altura",maior,"Menor altura",menor,"Media",soma)
+genero()
